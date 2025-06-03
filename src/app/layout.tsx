@@ -1,6 +1,6 @@
 import "@/assets/styles/globals.css";
-
 import { sans } from "@/assets/fonts";
+import { cn } from "@/utils/classNames";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayout) {
   return (
     <html lang="en">
-      <body className={sans.variable}>{children}</body>
+      <body className={cn(sans.variable, "antialiased")}>{children}</body>
     </html>
   );
 }
