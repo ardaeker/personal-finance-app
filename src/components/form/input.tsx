@@ -36,5 +36,17 @@ interface InputGroupProps {
 }
 
 export function InputGroup({ children }: InputGroupProps) {
-  return <span>{children}</span>;
+  return (
+    <span
+      className={classNames([
+        "relative isolate block",
+        "has-[[data-slot=icon]:first-child]:[&_input]:pl-11 has-[[data-slot=icon]:last-child]:[&_input]:pr-11",
+        "*:data-[slot=icon]:pointer-events-none *:data-[slot=icon]:absolute *:data-[slot=icon]:top-1/2 *:data-[slot=icon]:z-10 *:data-[slot=icon]:size-4 *:data-[slot=icon]:-translate-y-1/2",
+        "[&>[data-slot=icon]:first-child]:left-5 [&>[data-slot=icon]:last-child]:right-5",
+        "has-[&_input:focus]:fill-gray-900 has-[&_input:not(:focus)]:fill-gray-500",
+      ])}
+    >
+      {children}
+    </span>
+  );
 }
