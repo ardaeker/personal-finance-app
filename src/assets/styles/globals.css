@@ -7,6 +7,9 @@
 
 @theme {
   --color-*: initial;
+
+  --color-white: #ffffff;
+
   --color-beige-500: #98908b;
   --color-beige-100: #f8f4f0;
 
