@@ -16,6 +16,8 @@ export function PasswordInput(props: PasswordInputProps) {
     setIsVisible((prev) => !prev);
   }, [isVisible]);
 
+  // TODO: Handle focus state
+
   // useEffect(() => {
   //   if (ref.current) {
   //     ref.current.focus();
