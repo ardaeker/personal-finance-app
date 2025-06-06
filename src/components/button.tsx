@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
   [
-    "inline-flex items-center justify-center isolate rounded-lg gap-x-3 p-4 disabled:opacity-50 text-sm",
+    "inline-flex items-center justify-center isolate rounded-lg gap-x-3 py-3 px-4 disabled:opacity-50 text-base",
     "focus:not-focus:outline-hidden focus:outline-2 focus:outline-offset-1 focus:outline-gray-500",
     "transition-colors duration-200",
     "border border-transparent",

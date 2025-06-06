@@ -5,7 +5,7 @@ import { Eye, EyeSlash } from "@/assets/icons";
 import { classNames } from "@/utils/classNames";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-interface PasswordInputProps extends Omit<RForm.FormControlProps, "asChild"> {}
+interface PasswordInputProps extends Omit<RForm.FormControlProps, "asChild" | "type"> {}
 
 export function PasswordInput(props: PasswordInputProps) {
   const [isVisible, setIsVisible] = useState(false);

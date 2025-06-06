@@ -39,7 +39,9 @@ export default function Layout({ children }: Layout) {
         </div>
       </header>
       {/* Page Content */}
-      <div className="flex-1 px-4 py-6 md:px-10 md:py-8">{children}</div>
+      <div className="flex-1 px-4 py-6 max-xl:flex max-xl:items-center max-xl:justify-center md:px-10 md:py-8">
+        {children}
+      </div>
     </main>
   );
 }
