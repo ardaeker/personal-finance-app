@@ -40,7 +40,7 @@ export function PasswordInput(props: PasswordInputProps) {
           className={classNames([
             "relative block w-full appearance-none rounded-lg px-[calc(--spacing(5)-1px)] py-[calc(--spacing(3)-1px)] pr-13",
             "placeholder:text-beige-500 text-sm text-gray-900",
-            "border border-gray-500/40 hover:border-gray-500/60",
+            "border border-gray-500/20 hover:border-gray-500/30",
             "bg-transparent",
             "focus:outline-hidden",
             "data-invalid:border-red-500 data-invalid:data-hover:border-red-500",
@@ -60,7 +60,7 @@ export function PasswordInput(props: PasswordInputProps) {
           "flex items-center justify-center rounded-lg",
           "bg-transparent hover:bg-gray-100",
           "sm:focus-within:ring-1 sm:focus-within:ring-gray-500",
-          "border border-gray-500/50 hover:border-gray-500/60",
+          "border border-gray-500/30 hover:border-gray-500/40",
           "focus:outline-hidden",
         ])}
       >

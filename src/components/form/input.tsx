@@ -18,7 +18,7 @@ export function Input(props: InputProps) {
         className={classNames([
           "relative block w-full appearance-none rounded-lg px-[calc(--spacing(5)-1px)] py-[calc(--spacing(3)-1px)]",
           "placeholder:text-beige-500 text-sm text-gray-900",
-          "border border-gray-500/40 hover:border-gray-500/60",
+          "border border-gray-500/20 hover:border-gray-500/30",
           "bg-transparent",
           "focus:outline-hidden",
           "data-invalid:border-red-500 data-invalid:data-hover:border-red-500",
