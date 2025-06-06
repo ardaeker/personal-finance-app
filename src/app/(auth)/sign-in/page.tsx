@@ -10,7 +10,7 @@ export default function Page() {
         <p className="text-center text-sm text-gray-500">
           Need to create an account?{" "}
           <Link
-            href="sign-up"
+            href="/sign-up"
             className="inline-block font-bold text-gray-900 underline hover:text-gray-900/80 hover:no-underline"
           >
             Sign Up
