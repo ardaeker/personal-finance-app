@@ -6,4 +6,8 @@ declare global {
   type RootLayout = Readonly<{
     children: React.ReactNode;
   }>;
+
+  type Layout = {
+    children: React.ReactNode;
+  };
 }
