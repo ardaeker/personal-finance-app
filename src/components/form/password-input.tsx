@@ -54,6 +54,7 @@ export function PasswordInput(props: PasswordInputProps) {
       <button
         type="button"
         onClick={handleTogglePassword}
+        tabIndex={props.tabIndex && props.tabIndex + 1}
         aria-label={isVisible ? "Hide password" : "Show password"}
         className={classNames([
           "absolute top-1/2 right-3 z-10 h-7 w-7.5 -translate-y-1/2",
