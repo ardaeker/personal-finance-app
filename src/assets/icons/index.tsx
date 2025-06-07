@@ -64,7 +64,7 @@ export const MagnifyingGlass = (props: React.SVGProps<SVGSVGElement>) => {
 
 export const House = (props: React.SVGProps<SVGSVGElement>) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" data-slot="icon" viewBox="0 0 16 16" {...props}>
       <path d="M14 7.222V13a1 1 0 0 1-1 1h-2.5a1 1 0 0 1-1-1v-2.5A.5.5 0 0 0 9 10H7a.5.5 0 0 0-.5.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.222a1 1 0 0 1 .323-.736l5-4.718.007-.007a1 1 0 0 1 1.352.007l5 4.718a1 1 0 0 1 .318.736Z" />
     </svg>
   );
@@ -73,10 +73,7 @@ export const House = (props: React.SVGProps<SVGSVGElement>) => {
 export const ArrowsDownUp = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" data-slot="icon" viewBox="0 0 16 16" {...props}>
-      <path
-        fill="#201F24"
-        d="M7.462 10.809a.5.5 0 0 1-.108.545l-2 2a.5.5 0 0 1-.708 0l-2-2A.5.5 0 0 1 3 10.5h1.5V3a.5.5 0 0 1 1 0v7.5H7a.5.5 0 0 1 .462.309Zm5.892-6.163-2-2a.5.5 0 0 0-.708 0l-2 2A.5.5 0 0 0 9 5.5h1.5V13a.5.5 0 0 0 1 0V5.5H13a.5.5 0 0 0 .354-.854Z"
-      />
+      <path d="M7.462 10.809a.5.5 0 0 1-.108.545l-2 2a.5.5 0 0 1-.708 0l-2-2A.5.5 0 0 1 3 10.5h1.5V3a.5.5 0 0 1 1 0v7.5H7a.5.5 0 0 1 .462.309Zm5.892-6.163-2-2a.5.5 0 0 0-.708 0l-2 2A.5.5 0 0 0 9 5.5h1.5V13a.5.5 0 0 0 1 0V5.5H13a.5.5 0 0 0 .354-.854Z" />
     </svg>
   );
 };

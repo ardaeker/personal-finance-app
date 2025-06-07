@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div>
-      <h1>Overview</h1>
+      <h1>Recurring Bills</h1>
     </div>
   );
 }
