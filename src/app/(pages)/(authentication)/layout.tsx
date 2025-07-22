@@ -29,7 +29,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div className="flex flex-1 items-center justify-center px-4 py-6 sm:px-10 sm:py-8">{children}</div>
+        <div className="flex flex-1 items-center justify-center px-4 py-6 sm:px-10 sm:py-8">
+          <div className="w-full max-w-140 rounded-xl bg-white px-5 py-6 md:p-8">{children}</div>
+        </div>
       </div>
     </div>
   );
