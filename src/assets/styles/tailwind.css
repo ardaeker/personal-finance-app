@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --color-red-500: #c94736;
+
+  --color-cyan-500: #82c9d7;
+
+  --color-blue-500: #3f82b2;
+
+  --color-pink-500: #af81ba;
+
+  --color-gray-100: #f2f2f2;
+  --color-gray-300: #b3b3b3;
+  --color-gray-500: #696868;
+  /* Navy Grey */
+  --color-gray-400: #97a0ac;
+  /* Navy */
+  --color-gray-700: #626070;
+  --color-gray-900: #201f24;
+
+  --color-green-500: #277c78;
+  /* Army Green */
+  --color-green-600: #7f9161;
+  /* Turquoise */
+  --color-green-700: #597c7c;
+
+  --color-beige-100: #f8f4f0;
+  --color-beige-500: #98908b;
+
+  --color-brown-500: #93674f;
+
+  --color-yellow-500: #f2cdac;
+  /* Gold */
+  --color-yellow-700: #cab361;
+
+  --color-purple-500: #826cb0;
+
+  --color-orange-500: #be6c49;
+
+  --color-magenta-500: #934f6f;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-sans--font-feature-settings: "liga" off, "clig" off;
+
+  --color-red-500: var(--color-red-500);
+
+  --color-cyan-500: var(--color-cyan-500);
+
+  --color-blue-500: var(--color-blue-500);
+
+  --color-pink-500: var(--color-pink-500);
+
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-300: var(--color-gray-300);
+  --color-gray-500: var(--color-gray-500);
+  /* Navy Grey */
+  --color-gray-400: var(--color-gray-400);
+  /* Navy */
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-900: var(--color-gray-900);
+
+  --color-green-500: var(--color-green-500);
+  /* Army Green */
+  --color-green-600: var(--color-green-600);
+  /* Turquoise */
+  --color-green-700: var(--color-green-700);
+
+  --color-beige-100: var(--color-beige-100);
+  --color-beige-500: var(--color-beige-500);
+
+  --color-brown-500: var(--color-brown-500);
+
+  --color-yellow-500: var(--color-yellow-500);
+  /* Gold */
+  --color-yellow-700: var(--color-yellow-700);
+
+  --color-purple-500: var(--color-purple-500);
+
+  --color-orange-500: var(--color-orange-500);
+
+  --color-magenta-500: var(--color-magenta-500);
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
