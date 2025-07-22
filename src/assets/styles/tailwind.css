@@ -41,6 +41,12 @@
 }
 
 @theme inline {
+  /* 1120px */
+  --breakpoint-lg: 70rem;
+
+  /* 1920px */
+  --breakpoint-3xl: 121rem;
+
   --font-sans: var(--font-sans);
   --font-sans--font-feature-settings: "liga" off, "clig" off;
 
@@ -87,4 +93,8 @@ html,
 body {
   min-height: 100vh;
   min-height: 100dvh;
+}
+
+body {
+  background-color: var(--color-beige-100);
 }
