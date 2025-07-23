@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayout) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} antialiased`}>{children}</body>
+      <body className={`${sans.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
 }
