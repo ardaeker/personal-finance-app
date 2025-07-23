@@ -50,7 +50,7 @@ export function ErrorMessage({
     <Headless.Description
       data-slot="error"
       {...props}
-      className={classNames(className, "text-base/6 text-red-600 data-disabled:opacity-50 sm:text-sm/6")}
+      className={classNames(className, "text-base/6 text-red-500 data-disabled:opacity-50 sm:text-sm/6")}
     />
   );
 }
