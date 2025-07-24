@@ -10,12 +10,7 @@ export default function Page() {
       <form className="space-y-4">
         <Field>
           <Label>Email</Label>
-          <InputGroup>
-            <Input type="email" />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" data-slot="icon">
-              <path d="m14.354 14.146-3.13-3.129a5.507 5.507 0 1 0-.707.707l3.13 3.13a.5.5 0 0 0 .707-.708ZM2.5 7.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Z" />
-            </svg>
-          </InputGroup>
+          <Input type="email" />
         </Field>
         <Field>
           <Label>Password</Label>
