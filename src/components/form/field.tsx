@@ -37,7 +37,7 @@ export function Description({
     <Headless.Description
       data-slot="description"
       {...props}
-      className={classNames(className, "text-base/6 text-zinc-500 data-disabled:opacity-50 sm:text-sm/6")}
+      className={classNames(className, "text-end text-sm/5 text-gray-500 data-disabled:opacity-50 sm:text-xs/5")}
     />
   );
 }
