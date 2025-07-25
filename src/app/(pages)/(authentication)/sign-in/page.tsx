@@ -18,12 +18,20 @@ export default function Page() {
         </Field>
         <Button className="mt-4 w-full">Login</Button>
       </form>
-      <p className="text-center text-sm/5 text-gray-500">
-        Need to create an account?{" "}
-        <Link href="/sign-up" className="font-bold text-gray-900 underline hover:no-underline">
-          Sign Up
+      <div className="space-y-4">
+        <p className="text-center text-sm/5 text-gray-500">
+          Need to create an account?{" "}
+          <Link href="/sign-up" className="font-bold text-gray-900 underline hover:no-underline">
+            Sign Up
+          </Link>
+        </p>
+        <Link
+          href="/forgot-password"
+          className="block text-center text-sm/5 font-medium text-gray-900 underline hover:no-underline"
+        >
+          Forgot your password?
         </Link>
-      </p>
+      </div>
     </main>
   );
 }
