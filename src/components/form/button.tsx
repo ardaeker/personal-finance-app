@@ -25,7 +25,7 @@ export const Button = forwardRef(function Button(
   { secondary, tertiary, destroy, className, children, ...props }: ButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
-  let classes = classNames(
+  const classes = classNames(
     styles.base,
     secondary ? styles.secondary : tertiary ? styles.tertiary : destroy ? styles.destroy : classNames(styles.primary),
     className,
