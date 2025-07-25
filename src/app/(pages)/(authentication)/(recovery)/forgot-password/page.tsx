@@ -1,6 +1,7 @@
 import { Input } from "@/components/form/input";
 import { Button } from "@/components/form/button";
 import { Field, Label } from "@/components/form/field";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -16,6 +17,12 @@ export default function Page() {
         </Field>
         <Button className="mt-4 w-full">Send Reset Link</Button>
       </form>
+      <p className="text-center text-sm/5 text-gray-500">
+        Need to create an account?{" "}
+        <Link href="/sign-up" className="font-bold text-gray-900 underline hover:no-underline">
+          Sign Up
+        </Link>
+      </p>
     </main>
   );
 }
