@@ -43,6 +43,8 @@
 @theme inline {
   /* 1120px */
   --breakpoint-lg: 70rem;
+  /* 1440px */
+  --breakpoint-xl: 90rem;
 
   /* 1920px */
   --breakpoint-3xl: 121rem;
