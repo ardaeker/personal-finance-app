@@ -27,7 +27,7 @@ export default function Page() {
         </p>
         <Link
           href="/forgot-password"
-          className="block text-center text-sm/5 font-medium text-gray-900 underline hover:no-underline"
+          className="mx-auto block max-w-max text-center text-sm/5 font-medium text-gray-900 underline hover:no-underline"
         >
           Forgot your password?
         </Link>
