@@ -54,12 +54,9 @@ const routes = [
   },
 ];
 
-function MobileNavbarItem({ route }: { route: (typeof routes)[0] }) {
-  const pathname = usePathname();
-  const current = pathname === route.href;
-
+function MobileNavbarItem({ route, current }: { current?: boolean; route: (typeof routes)[0] }) {
   return (
-    <span key={route.href} className="relative flex-1">
+    <span key={route.href} className="relative size-full flex-1">
       {current && (
         <motion.span
           layoutId="current-indicator"
@@ -71,6 +68,7 @@ function MobileNavbarItem({ route }: { route: (typeof routes)[0] }) {
         <Link
           href={route.href}
           aria-label={`Go to ${route.title} page`}
+          data-current={current ? "true" : undefined}
           className="relative flex size-full items-center justify-center md:flex-col md:gap-x-1"
         >
           <route.icon
@@ -96,14 +94,18 @@ function MobileNavbarItem({ route }: { route: (typeof routes)[0] }) {
 
 function MobileNavbar() {
   let id = useId();
+  const pathname = usePathname();
 
   return (
     <LayoutGroup id={id}>
-      <nav className="flex h-13 w-full items-center justify-between rounded-t-lg bg-gray-900 px-4 pt-2 md:h-18.5 md:px-10">
-        {routes.map((route) => (
-          <MobileNavbarItem key={route.href} route={route} />
-        ))}
-      </nav>
+      <div>
+        <nav className="flex h-13 w-full items-center justify-between rounded-t-lg bg-gray-900 px-4 pt-2 md:h-18.5 md:px-10">
+          {routes.map((route) => {
+            const current = route.href === "/" ? pathname === "/" : pathname.startsWith(route.href);
+            return <MobileNavbarItem key={route.href} route={route} current={current} />;
+          })}
+        </nav>
+      </div>
     </LayoutGroup>
   );
 }
