@@ -8,7 +8,7 @@ import { LayoutGroup, motion } from "motion/react";
 import { classNames } from "@/utils/class-names";
 
 function NavbarItemLabel(props: Omit<React.HTMLAttributes<HTMLSpanElement>, "className">) {
-  return <span className="hidden text-xs leading-4.5 font-bold transition-colors duration-200 md:block" {...props} />;
+  return <span className="hidden text-xs leading-4.5 font-bold transition-colors duration-300 md:block" {...props} />;
 }
 
 function MobileNavbarItem({ href, current, children }: { href: string; current?: boolean; children: React.ReactNode }) {
@@ -25,7 +25,7 @@ function MobileNavbarItem({ href, current, children }: { href: string; current?:
         href={href}
         data-current={current ? "true" : undefined}
         className={classNames(
-          "relative flex size-full items-center justify-center *:data-[slot=icon]:size-5 *:data-[slot=icon]:transition-colors *:data-[slot=icon]:duration-200 md:flex-col md:gap-x-1",
+          "relative flex size-full items-center justify-center *:data-[slot=icon]:size-5 *:data-[slot=icon]:transition-colors *:data-[slot=icon]:duration-300 md:flex-col md:gap-x-1",
           current
             ? "text-gray-900 *:data-[slot=icon]:fill-green-500"
             : "text-gray-300 *:data-[slot=icon]:fill-gray-300",
