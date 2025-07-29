@@ -272,7 +272,9 @@ export function ApplicationLayout({ children }: ApplicationLayoutProps) {
       <div className="hidden xl:block">
         <Sidebar isExpended={isExpended} setIsExpended={setIsExpended} />
       </div>
-      <div className="pb-13 md:pb-18.5 xl:flex-1 xl:pb-0">{children}</div>
+      <div className="pb-13 md:pb-18.5 xl:mx-auto xl:max-w-285 xl:flex-1 xl:pb-0">
+        <div className="px-4 py-6 md:px-10 md:py-8">{children}</div>
+      </div>
       <div className="fixed right-0 bottom-0 left-0 xl:hidden">
         <MobileNavbar />
       </div>
