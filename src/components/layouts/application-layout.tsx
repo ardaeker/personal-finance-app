@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useState } from "react";
+import { useCallback, useId, useState } from "react";
 import * as Icons from "@/assets/icons";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
@@ -260,17 +260,27 @@ function Sidebar({ isExpended, setIsExpended }: SidebarProps) {
   );
 }
 
-interface ApplicationLayoutProps {
+type ApplicationLayoutProps = {
+  defaultOpen: boolean;
   children: React.ReactNode;
-}
+};
 
-export function ApplicationLayout({ children }: ApplicationLayoutProps) {
-  const [isExpended, setIsExpended] = useState(true);
+export function ApplicationLayout({ defaultOpen, children }: ApplicationLayoutProps) {
+  const [isExpended, setIsExpended] = useState(defaultOpen);
+
+  const handleSidebarExpend = useCallback(
+    (value: boolean) => {
+      setIsExpended(value);
+
+      document.cookie = `sidebar_state=${value}; path=/; max-age=60 * 60 * 24 * 7`;
+    },
+    [isExpended],
+  );
 
   return (
     <div className="relative min-h-screen xl:flex">
       <div className="hidden xl:block">
-        <Sidebar isExpended={isExpended} setIsExpended={setIsExpended} />
+        <Sidebar isExpended={isExpended} setIsExpended={handleSidebarExpend} />
       </div>
       <div className="pb-13 md:pb-18.5 xl:mx-auto xl:max-w-285 xl:flex-1 xl:pb-0">
         <div className="px-4 py-6 md:px-10 md:py-8">{children}</div>
