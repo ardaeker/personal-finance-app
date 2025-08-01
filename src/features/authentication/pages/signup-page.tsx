@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SignupForm } from "../forms";
+import { SignupForm } from "@/features/authentication/forms";
 
 export function SignupPage() {
   return (

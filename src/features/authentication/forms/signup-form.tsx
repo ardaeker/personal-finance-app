@@ -23,11 +23,12 @@ export function SignupForm() {
   });
 
   async function onSubmit(values: SignupSchema) {
-    const { error } = await signupAction(values);
+    console.log(values);
+    // const { error } = await signupAction(values);
 
-    if (!error) {
-      router.push("/");
-    }
+    // if (!error) {
+    //   router.push("/");
+    // }
 
     return;
   }
