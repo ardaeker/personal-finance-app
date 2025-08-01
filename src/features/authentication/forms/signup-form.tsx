@@ -16,18 +16,14 @@ export function SignupForm() {
   const form = useForm<SignupSchema>({
     resolver: zodResolver(signupSchema),
     defaultValues: {
-      name: "Arda Eker",
-      email: "ardaekereu@gmail.com",
-      password: "test1234",
+      name: "",
+      email: "",
+      password: "",
     },
   });
 
   async function onSubmit(values: SignupSchema) {
-    const { error } = await signupAction({
-      name: "",
-      email: "",
-      password: "",
-    });
+    const { error } = await signupAction(values);
 
     if (!error) {
       router.push("/");
