@@ -1,16 +1,24 @@
 "use server";
 
+import { z } from "zod";
 import { createClient } from "@/utils/supabase/server";
 import { type SignupSchema, signupSchema } from "../schemas";
 
 export async function signupAction(formData: SignupSchema) {
-    const parsedFormData = signupSchema.safeParse(formData);
+    const validation = signupSchema.safeParse(formData);
 
-    if (!parsedFormData.success) {
-        return { error: "Invalid form data" };
+    if (!validation.success) {
+        const errorTree = z.treeifyError(validation.error);
+
+        return {
+            error: {
+                code: "VALIDATION_ERROR",
+                details: errorTree,
+            },
+        };
     }
 
-    const { name, email, password } = parsedFormData.data;
+    const { name, email, password } = validation.data;
 
     const supabase = await createClient();
 
