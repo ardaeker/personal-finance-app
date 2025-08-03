@@ -33,7 +33,12 @@ export async function signupAction(formData: SignupSchema) {
     });
 
     if (error) {
-        return { error: error.message };
+        return {
+            error: {
+                code: "SIGNUP_ERROR",
+                details: null,
+            },
+        };
     }
 
     return { error: null };

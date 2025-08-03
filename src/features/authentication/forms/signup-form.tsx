@@ -1,14 +1,15 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 import { Input } from "@/components/form/input";
 import { Button } from "@/components/form/button";
 import { Description, ErrorMessage, Field, Label } from "@/components/form/field";
 
 import { useForm } from "react-hook-form";
+import { minDelay } from "@/utils/min-delay";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signupSchema, SignupSchema } from "../schemas";
-import { signupAction } from "../actions";
-import { useRouter } from "next/navigation";
+import { signupAction } from "@/features/authentication/actions";
+import { signupSchema, SignupSchema } from "@/features/authentication/schemas";
 
 export function SignupForm() {
   const router = useRouter();
@@ -23,15 +24,23 @@ export function SignupForm() {
   });
 
   async function onSubmit(values: SignupSchema) {
-    const { error } = await signupAction(values);
+    const { error } = await minDelay(signupAction(values), 500);
 
-    if (!error) {
-      router.push("/");
+    if (error) {
+      if (error.code === "VALIDATION_ERROR") {
+        if (!error?.details?.properties) return;
+
+        Object.entries(error.details.properties).forEach(([field, fieldError]) => {
+          if (fieldError?.errors?.length) {
+            form.setError(field as keyof SignupSchema, {
+              message: fieldError.errors[0],
+            });
+          }
+        });
+      }
+
+      return;
     }
-
-    console.log(error);
-
-    return;
   }
 
   return (
